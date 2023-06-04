@@ -1,0 +1,35 @@
+<div id="full-under">
+    <div id="search-div">
+        <!-- (ngModelChange)=serachproductsinbox() -->
+        <form class="search-pdts">
+            <input [(ngModel)]="Searchitems" (ngModelChange)="search()" id="input-id" type="text" placeholder="Search for Products...." (ngModelChange)=serachproductsinbox()>
+            <button id="search-icon" (click)=search()><i id ="buttn-id" class="bi bi-search" style="font-size: 24px;"></i></button>
+            <!-- (click)="serachproductsinbox($eve" -->
+            <!-- routerLink="gocart" -->
+        </form>
+    </div>
+    <div class="dummy-div">
+
+        <div class="dummy-div" id="card" *ngFor="let prdt of products">
+
+
+            <div>
+                <img class="small-card" src={{prdt.imageURL}}>
+            </div>
+            <div id="rs-add-div">
+                <p id="rs"><b>Rs {{prdt.price}}</b></p>
+                <!-- one way communication hai {{product.price}} or esko one way data binding{ agr hum compoant se htm file 
+                mein jaa rhe ya data bhj rhe ye one way hai data binding or agr hm ts se html mein or html se ts mein jaa rhe toh two way data binding
+             bolte hai} -->
+                <button id="add-btn" (click)="cartitems(prdt.imageURL,prdt.name,prdt.price)">Add to cart</button>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+<!-- <p>{{ products | json }}</p> -->

@@ -1,0 +1,16 @@
+#list-filters {
+    display: flex;
+    flex-direction: row;
+}
+
+#app-tshirts {
+    /* border: 2px solid black; */
+    height: auto;
+    width: 75%;
+}
+
+#app-filter {
+    /* border: 2px solid black; */
+    height: 100vh;
+    width: 25%;
+}

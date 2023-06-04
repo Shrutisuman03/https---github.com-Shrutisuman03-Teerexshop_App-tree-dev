@@ -1,0 +1,58 @@
+<div id="filter-main-div">
+    <div id="internal-part">
+        <p><b>Colour</b></p>
+        <label class="container">
+      <input type="checkbox" (click)="colorfun('Red')" >
+      <span > Red</span>
+      <!-- //[(ngModel)]="selectcolor" -->
+    </label>
+
+        <label class="container">
+      <input type="checkbox" (click)="colorfun('Green')">
+      <span  > Green</span>
+      <!-- [(ngModel)]="selectcolor" -->
+    </label>
+
+        <label class="container">
+      <input type="checkbox" (click)="colorfun('Blue')">
+      <span > Blue</span>
+    </label>
+
+        <p><b>Gender</b></p>
+        <label class="container">
+      <input type="checkbox" (click)="genderfun('Men')">
+      <span  > Men</span>
+    </label>
+        <label class="container">
+      <input type="checkbox" (click)="genderfun('Women')">
+      <span  > Women</span>
+      <!-- [(ngModel)]="genderscategory"  -->
+    </label>
+        <p><b>Price</b></p>
+        <label class="container">
+      <input type="checkbox" (click)="markedprice(0,250)">
+      <span> 0-Rs250/-</span>
+    </label>
+        <label class="container">
+      <input type="checkbox" (click)="markedprice(251,450)">
+      <span  > Rs251/-Rs450/-</span>
+    </label>
+        <label class="container">
+      <input type="checkbox" (click)="markedprice(450,450)">
+      <span > Rs450/-</span>
+    </label>
+        <p><b>Type</b></p>
+        <label class="container">
+      <input type="checkbox" (click)="typesoftshirts('Polo')">
+      <span > Polo</span>
+    </label>
+        <label class="container">
+      <input type="checkbox" (click)="typesoftshirts('Hoodie')">
+      <span > Hoodie</span>
+    </label>
+        <label class="container">
+      <input type="checkbox" (click)="typesoftshirts('Basic')">
+      <span > Basic</span>
+    </label>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+#full-under {
+    margin-top: 100px;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 220px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 20px;
+    margin-top: 80px;
+}
+
+.small-card {
+    margin-left: 20px;
+    height: 150px;
+    width: 175px;
+    background-color: rgb(200, 198, 198);
+    margin-top: 18px;
+}
+
+#rs-add-div {
+    display: flex;
+}
+
+#add-btn {
+    background-color: rgb(156, 154, 154);
+    margin-left: 40px;
+    margin-top: 8px;
+}
+
+#rs {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+#search-div {
+    margin-left: 30%;
+    /* margin-top: 3%; */
+}
+
+.search-pdts {
+    /* height: 20px; */
+    /* width: 10px; */
+}
+
+#input-id {
+    height: 42px;
+    width: 60%;
+    margin-top: -20%;
+    border-top: 0px solid white;
+    border-right: 0px solid white;
+    border-left: 0px solid white;
+}
+
+#buttn-id {
+    margin-top: 10px;
+}
+
+#search-icon {
+    background-color: #b5b5b5;
+}
+
+.dummy-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* margin-top: 100px; */
+    /* border: 100px solid white; */
+}

@@ -1,0 +1,22 @@
+<div id="list-filters">
+
+    <div id="app-filter">
+        <!-- // allevent se liya sara tick wala item ye filter component se common_fun_gendata_priceselectdata  mein 
+        liyaa hai phir list component mein bhj rhe hai -->
+        <!-- one way communictaiion hai ye -->
+        <app-filter (allEvent)="common_fun_both_gendataand_priceselectdata($event)"> </app-filter>
+        <!-- (selectprice)="getpricedata($event)" :(genderselect)="getgenderdata($event)" :(emitcolours)="getcolourdata($event)" -->
+    </div>
+    <div id="app-tshirts">
+        <!-- ye [produvts1]=[product] two way communication hai -->
+        <!-- child = parent -->
+        <!-- products1 t-shirt compenent ts ka hai or products jo hai wo list component ts file ka hai -->
+        <app-tshirts [products1]=[products] (searchboxEvent)="searchboxfield($event)"></app-tshirts>
+        <!-- (searchboxEvent)="searchboxfield($event)" -->
+
+        <!-- // parent se child mein jata hai toh phle child class vaarible then parent class krte hai  -->
+        <!-- yaha pe products1 and products dono variable hai  -->
+    </div>
+</div>
+<!-- //;(genderselect)="getgenderdata($event)" -->
+<!-- :(genderselect)="getgenderdata($event)" :(selectcolors)="getcolourdata($event)" -->
