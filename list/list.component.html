@@ -1,21 +1,49 @@
-<div id="list-filters">
+<div *ngIf="mainContent">
+    <div id="list-filters">
 
-    <div id="app-filter">
-        <!-- // allevent se liya sara tick wala item ye filter component se common_fun_gendata_priceselectdata  mein 
+        <div id="app-filter">
+            <!-- // allevent se liya sara tick wala item ye filter component se common_fun_gendata_priceselectdata  mein 
         liyaa hai phir list component mein bhj rhe hai -->
-        <!-- one way communictaiion hai ye -->
-        <app-filter (allEvent)="common_fun_both_gendataand_priceselectdata($event)"> </app-filter>
-        <!-- (selectprice)="getpricedata($event)" :(genderselect)="getgenderdata($event)" :(emitcolours)="getcolourdata($event)" -->
-    </div>
-    <div id="app-tshirts">
-        <!-- ye [produvts1]=[product] two way communication hai -->
-        <!-- child = parent -->
-        <!-- products1 t-shirt compenent ts ka hai or products jo hai wo list component ts file ka hai -->
-        <app-tshirts [products1]=[products] (searchboxEvent)="searchboxfield($event)"></app-tshirts>
-        <!-- (searchboxEvent)="searchboxfield($event)" -->
+            <!-- one way communictaiion hai ye -->
+            <app-filter (allEvent)="common_fun_both_gendataand_priceselectdata($event)"> </app-filter>
+            <!-- (selectprice)="getpricedata($event)" :(genderselect)="getgenderdata($event)" :(emitcolours)="getcolourdata($event)" -->
+        </div>
+        <div id="app-tshirts">
+            <!-- ye [produvts1]=[product] two way communication hai -->
+            <!-- child = parent -->
+            <!-- products1 t-shirt compenent ts ka hai or products jo hai wo list component ts file ka hai -->
+            <app-tshirts (productsetting)="onProductSetting($event)" [products1]=[products] (searchboxEvent)="searchboxfield($event)"></app-tshirts>
+            <!-- (searchboxEvent)="searchboxfield($event)" -->
 
-        <!-- // parent se child mein jata hai toh phle child class vaarible then parent class krte hai  -->
-        <!-- yaha pe products1 and products dono variable hai  -->
+            <!-- // parent se child mein jata hai toh phle child class vaarible then parent class krte hai  -->
+            <!-- yaha pe products1 and products dono variable hai  -->
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="!mainContent">
+    <div id="main-cart-css" *ngFor="let prdt of cartDetails">
+
+        <div id="qty-delet">
+            <div>
+                <img id="img-set-card" src={{prdt.imageURL}}>
+            </div>
+            <div class="img-pric-div">
+                <div>
+                    <h4><b>{{prdt.name}}</b></h4>
+                </div>
+                <div>
+                    <h4><b>Rs {{prdt.price}}/-</b></h4>
+                </div>
+
+            </div>
+            <div class="bttn-delete-div">
+                <button><b>Qty {{prdt.quantity}}</b></button>
+                <button>delete</button>
+            </div>
+        </div>
+
     </div>
 </div>
 <!-- //;(genderselect)="getgenderdata($event)" -->

@@ -8,12 +8,24 @@ import{ListsService } from'../lists.service';
   providers: [ListsService]
 })
   export class ListComponent {
+  mainContent:Boolean = true;
   products: any[] =[];
   parenttesting : string = "worktesting";
   getsecprice: number;
   getgender: string;
   getcolors: string;
   gettype: string;
+
+ cartDetails: any[] = [];
+
+  onProductSetting(cartDetails: any[]) {
+   
+    this.cartDetails = cartDetails;
+    if(this.cartDetails.length >= 2){
+      this.mainContent = false;
+    }
+    console.log("this is in list compent and data is coming from tshirt comp",this.cartDetails);
+  }
   
   constructor(private listsService: ListsService){
      this.getsecprice=0;
@@ -102,8 +114,10 @@ import{ListsService } from'../lists.service';
 
 }
     async ngOnInit() {
+
      const onres = await this.listsService.getproductdetails()
      console.log("this data from list component data by list services =>"+onres);
+
 
      onres.forEach((product:any)=>{
       this.products.push(product);
@@ -117,7 +131,9 @@ import{ListsService } from'../lists.service';
       console.log("for each loop price$$ =>"+product.price)
       
       
+      
     }) 
+
     console.log("this is list compenent in 100 line"+ this.products);
       //   this.listsService.getproductdetails().subscribe((res)=>{
       //     console.log(res[0]);
@@ -128,6 +144,7 @@ import{ListsService } from'../lists.service';
       //     })
       //  })
     //  console.log("the product from api",this.products)
+    console.log( " listcomponent se mein list service function ko check kr rhe hai"+this.listsService.getcartdetails())
     
   }
 

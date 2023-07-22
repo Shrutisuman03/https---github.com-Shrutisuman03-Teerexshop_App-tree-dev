@@ -15,6 +15,8 @@ export class TshirtsComponent {
  // parent to child data we will use @input
  @Input() products1: any[]=[];
  @Output() productset:any[]=[];
+ @Output() buypdts: any[]=[];
+
  startpricevalue: number;
  endpricevalue: number;
  @Output()productsetting = new EventEmitter<any[]>();
@@ -62,10 +64,10 @@ constructor(private listsService: ListsService){
 
   }
   cartitems(imageurl :any,nameofts:any,prices:number){
-    console.log("ts file filter cartitems all")
-    console.log("ye price ts wala check kr rhe",imageurl,nameofts,prices)
-    this.productsetting.emit(this.listsService.getcartdetails())
    this.listsService.setBuyproduct(imageurl,nameofts,prices)
+   console.log("tshirt comp getcartdetails we found this one",this.listsService.getcartdetails())
+   this.productsetting.emit(this.listsService.getcartdetails())
+  //  this.listsService.setBuyproduct(imageurl,nameofts,prices)
    console.log("cartdetails list wala tshirt ts m ",this.listsService.getcartdetails())
    this.listsService.setparentdata(this.listsService.getcartdetails());
   }

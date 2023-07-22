@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  changeEvent(){
+    console.log('changeevent header component 10 line')
+  }
 
 }
+

@@ -14,3 +14,45 @@
     height: 100vh;
     width: 25%;
 }
+
+#img-set-card {
+    height: 110px;
+    width: 100px;
+    margin-top: 80px;
+}
+
+#main-cart-css {
+    width: 400px;
+    height: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    margin-left: 35vw;
+    position: relative;
+    /* padding-top: 50px; */
+    margin-top: 50px;
+}
+
+
+/* #main-div-list {
+    padding-top: -2000px;
+} */
+
+#qty-delet {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+}
+
+.img-pric-div {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.bttn-delete-div {
+    margin-top: 110px;
+}
+
+button {
+    margin: 8px;
+}
